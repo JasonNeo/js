@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sunburst.css">
+		
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="line top"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+			<div class="line right"></div>
+
+			<!-- content -->
+			<div class="slides">
+
+				<section class="text-left">
+					<h1>Table of Contents</h1>
+					<ol>
+						<li>Introduction</li>
+						<li>The ABC of Programming</li>
+						<li>Basic JavaScript Language</li>
+						<li>Functions, Methods</li>
+						<li>Decisions & Loops</li>
+						<li>Document Object Model</li>
+						<li>Bonus: Events</li>
+					</ol>
+				</section>
+
+				<section><strong>1. Introduction</strong></section>
+
+				<section class="text-left">
+					<p>Q: What is JavaScript and how is it used in web programming?</p>
+					<p>A: JavaScript is a programming language used to make websites more interactive.</p>
+					<br>
+					<p>Examples:</p>
+					<ul>
+						<li><a href="https://www.insideasiatours.com/step-inside/japan" target="_blank" rel="noopener noreferrer">insideasiatours.com/step-inside/japan</a></li>
+						<li><a href="https://www.reputationsquad.com/" target="_blank" rel="noopener noreferrer">reputationsquad.com/</a></li>
+						<li><a href="http://codepen.io/Yakudoo/pen/oXJYxy" target="_blank" rel="noopener noreferrer">codepen.io/Yakudoo/pen/oXJYxy</a></li>
+						<li><a href="http://codepen.io/knoland/pen/XKxAJb" target="_blank" rel="noopener noreferrer">codepen.io/knoland/pen/XKxAJb</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<p>How HTML, CSS & JavaScript Fit Together</p>
+					<div class="row">
+						<div class="col">
+							<span class="badge badge-warning">Content Layer</span>
+							<p>HTML gives the page structure</p>
+						</div>
+						<div class="col">
+							<span class="badge badge-info">Presentation Layer</span>
+							<p>CSS enhances the HTML with styles</p>
+						</div>
+						<div class="col">
+							<span class="badge badge-success">Behavior Layer</span>
+							<p>JavaScript determines how the page behaves</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p>Q: How does JavaScript do all these amazing things?</p>
+					<p>A: Three steps:</p>
+					<ol class="pl-5">
+						<li>Access content</li>
+						<li>Modify content</li>
+						<li>React to events</li>
+					</ol>
+				</section>
+
+				<section><strong>2. The ABC of Programming</strong></section>
+
+				<section class="text-left">
+					<p><strong>Key concept</strong>: A script is a series of instructions that a computer can follow to achieve a goal.</p>
+					<br>
+					<p>Imagine you're baking a cake.</p>
+					<ol>
+						<li><p>First, you need to gather your ingredients.</p></li>
+						<li><p>Then, you mix the ingredients together.</p></li>
+						<li><p>Lastly, you put the cake batter into the oven.</p></li>
+					</ol>
+					<br>
+					<br>
+					<p class="text-right">A script is just a fancy way of saying recipe.</p>
+				</section>
+
+				<section><strong>3. Basic JavaScript Language</strong></section>
+
+				<section class="text-left">
+					<p>Like any new language, there are new words to learn (<strong>vocabulary</strong>) and rules for how to write the language (<strong>syntax</strong>).</p>
+					<br>
+					<p>Same goes for a programming language like JavaScript.</p>
+					<br>
+					<p>We will look at:</p>
+					<ol>
+						<li>Variables</li>
+						<li>Data Types</li>
+						<li>Operators</li>
+					</ol>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Variables</strong></p>
+					<br>
+					<p>Imagine you're trying to calculate the area of a rectangle.</p>
+					<br>
+					<p>A human would simply tell you to multiply the width by the height to get the area. A computer however does not understand formulas!</p>
+					<p>For a computer to do the same thing, it needs to:</p>
+					<ol>
+						<li>Remember the value for width</li>
+						<li>Remember the value for height</li>
+						<li>Multiple the two values together</li>
+						<li>Return the answer to the user</li>
+					</ol>
+				</section>
+
+				<section class="text-left">
+					<p>Variables are what computers use to "remember" these values. It is like a box that can store values in it!</p>
+					<img src="images/variables.png" alt="code screenshot" class="img-fluid">
+				</section>
+				
+				<section>
+						<img src="images/area.png" alt="code screenshot" class="img-fluid">
+				</section>
+
+				<section class="text-left">
+					<p><strong>Important:</strong> There are rules you must follow when naming variables. Your computer will be confused if you don't follow them!</p>
+					<div class="row">
+						<div class="col-7">
+							<ol>
+								<li>Name must <strong>not</strong> begin with a number</li>
+								<li>Name must <strong>not</strong> contain dash (-) or period (.)</li>
+								<li>Name must <strong>not</strong> be a reserved keyword, e.g. var</li>
+								<li>Variables are case sensitive, area & Area are <strong>not</strong> the same!</li>
+							</ol>
+						</div>
+						<div class="col-5">
+							<img src="images/var-rules.png" alt="code screenshot" class="img-fluid">
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Data Types</strong></p>
+					<p>JavaScript needs to classify data into different types to interact properly with values.</p>
+					<p>Example: You can do math with a number, but not with a sentence.</p>
+					<br>
+					<p>In JavaScript, there are 3 main data types (simplified):</p>
+					<ul>
+						<li>numbers</li>
+						<li>Boolean</li>
+						<li>strings</li>
+					</ul>
+				</section>
+
+				<section class="text-left">
+					<div class="row">
+						<div class="col">
+							<p>numbers</p>
+							<img src="images/numbers.png" alt="code screenshot of number datatype" class="img-fluid">
+						</div>
+						<div class="col">
+							<p>Boolean</p>
+							<img src="images/boolean.png" alt="code screenshot of number datatype" class="img-fluid">
+						</div>
+					</div>
+				</section>
+				
+				<section class="text-left">
+					<div class="row">
+						<div class="col">
+							<p>strings</p>
+							<img src="images/strings.png" alt="code screenshot of number datatype" class="img-fluid">
+						</div>
+						<div class="col">
+							<p>Notes:</p>
+							<ul>
+								<li>Remember to wrap your strings in quotes. They can be single (') or double (") quotes.</li>
+								<li>The reason we call it <em>strings</em> is because it's a <em>string of letters</em>!</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Operators</strong></p>
+					<div class="row">
+						<div class="col">
+							<img src="images/area.png" alt="code screenshot of arithmetic operators" class="img-fluid">
+							<p class="text-muted">from earlier</p>
+						</div>
+						<div class="col">
+							<img src="images/operators.png" alt="code screenshot of arithmetic operators" class="img-fluid">
+							<p class="text-muted">arithmetic operators</p>
+						</div>
+					</div>
+				</section>
+				
+				<section class="text-left">
+					<p><strong>Operators (string)</strong></p>
+					<p>There is only one string operator: the + symbol. <br>
+						It's used to join two strings together.</p>
+					<img src="images/operators-string.png" alt="code screenshot of string concatenation" class="img-fluid">
+					<p class="text-muted">fancy name: string concatenation</p>
+				</section>
+
+				<section class="text-left">
+					<p>Hands-on Practice!</p>
+					<ol>
+						<li>Store your birth year in a variable named <code>birthYear</code></li>
+						<li>Store the current year in a variable named <code>currentYear</code></li>
+						<li>Calculate your age by subtracting <code>birthYear</code> from <code>currentYear</code> and store it in a variable named <code>age</code></li>
+						<li>Show a message in the browser saying how old you are using <code>age</code> <em>and</em> <code>alert()</code></li>
+					</ol>
+					<br>
+					<br>
+					<p>Note: Remember to use string concatenation in Answer 4!</p>
+				</section>
+
+				<section>
+					<iframe
+						src="https://carbon.now.sh/embed/?bg=rgba(255%2C255%2C255%2C1)&t=one-dark&wt=none&l=markdown&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fm=Hack&fs=14px&lh=133%25&si=false&code=%253Cscript%253E%250A%2520%2520%250A%2520%2520var%2520birthYear%2520%253D%25201990%253B%250A%2520%2520var%2520currentYear%2520%253D%25202019%253B%250A%2520%2520var%2520age%2520%253D%2520currentYear%2520-%2520birthYear%253B%250A%2520%2520var%2520greeting%2520%253D%2520%2522Hello%252C%2520I%2520am%2520%2522%253B%250A%2520%2520%250A%2520%2520alert(greeting%2520%252B%2520age)%253B%250A%2520%2520%250A%253C%252Fscript%253E&es=2x&wm=false"
+						style="width:1024px; height:473px; border:0; overflow:hidden;"
+						sandbox="allow-scripts allow-same-origin">
+					</iframe>
+					<!-- <img src="images/answer-1.png" alt="code screenshot of answer for first practice" class="img-fluid"> -->
+				<p class="text-muted">Answer</p>
+				</section>
+			</div>
+		</div>
+
+		<!-- <li>Introduction</li>
+		<li>The ABC of Programming</li>
+		<li>Basic JavaScript Language</li>
+		<li>Functions, Methods & Objects</li>
+		<li>Decisions & Loops</li>
+		<li>Document Object Model</li>
+		<li>Events</li>
+		<li>jQuery</li> -->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="lib/js/jquery-3.3.1.slim.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				margin: 0.2,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+<script>
+  
+		var birthYear = 1990;
+		var currentYear = 2019;
+		var age = currentYear - birthYear;
+		var greeting = "Hello, I am ";
+		
+		// alert(greeting + age);
+		
+	  </script>
+	</body>
+</html>
