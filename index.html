@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>WebLaunch 2019 JavaScript</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/sunburst.css">
@@ -12,6 +12,7 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<link rel="stylesheet" href="lib/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/monster.css">
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Printing and PDF exports -->
@@ -24,6 +25,8 @@
 		</script>
 	</head>
 	<body>
+			
+		<!-- slides -->
 		<div class="reveal">
 			<div class="line top"></div>
 			<div class="line bottom"></div>
@@ -33,20 +36,63 @@
 			<!-- content -->
 			<div class="slides">
 
+				<section id="ufo-section">
+					<!-- corner avatar -->
+					<!-- https://scotch.io/bar-talk/build-an-eye-tracking-alien-with-javascript-solution-to-code-challenge-4 -->
+					<div id="ufo">
+						<div id="monster" class="text-info">
+							<div class="body">
+							<div class="ear"></div>
+							<div class="ear"></div>
+							<div class="vampi-mouth">
+								<div class="vampi-tooth"></div>
+							</div>
+							</div>
+							<div class="eye-lid">
+							<div class="eyes">
+								<div class="eye"></div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div id="speech-container">
+						<span id="monster-speech"></span>
+					</div>
+					<div id="btn-container" class="mt-4">
+						<button data-color="info" type="button" class="btn btn-info">Blue</button>
+						<button data-color="success" type="button" class="btn btn-success">Green</button>
+						<button data-color="danger" type="button" class="btn btn-danger">Red</button>
+						<button data-color="warning" type="button" class="btn btn-warning">Yellow</button>
+						<button data-color="light" type="button" class="btn btn-light">Light</button>
+						<button data-color="dark" type="button" class="btn btn-dark">Dark</button>
+					</div>
+				</section>
+
 				<section class="text-left">
 					<h1>Table of Contents</h1>
 					<ol>
 						<li>Introduction</li>
 						<li>The ABC of Programming</li>
 						<li>Basic JavaScript Language</li>
-						<li>Functions, Methods</li>
+						<li>Functions</li>
 						<li>Decisions & Loops</li>
-						<li>Document Object Model</li>
-						<li>Bonus: Events</li>
+						<li>Document Object Model (DOM)</li>
+						<li>Project: Custom Startpage</li>
 					</ol>
 				</section>
 
 				<section><strong>1. Introduction</strong></section>
+
+				<section>
+					<div class="d-flex align-items-center">
+						<i class="mr-3"><img src="images/icons/alert.png" alt=""></i>
+						<strong>Attention</strong>
+					</div>
+					<div class="d-flex align-items-center">
+						<i class="mr-3"><img src="images/icons/practice.png" alt=""></i>
+						<strong>Practice Time</strong>
+					</div>
+				</section>
 
 				<section class="text-left">
 					<p>Q: What is JavaScript and how is it used in web programming?</p>
@@ -79,7 +125,8 @@
 					</div>
 				</section>
 
-				<section class="text-left">
+				<!-- optional -->
+				<!-- <section class="text-left">
 					<p>Q: How does JavaScript do all these amazing things?</p>
 					<p>A: Three steps:</p>
 					<ol class="pl-5">
@@ -87,29 +134,53 @@
 						<li>Modify content</li>
 						<li>React to events</li>
 					</ol>
-				</section>
+				</section> -->
 
 				<section><strong>2. The ABC of Programming</strong></section>
 
 				<section class="text-left">
-					<p><strong>Key concept</strong>: A script is a series of instructions that a computer can follow to achieve a goal.</p>
+					<i><img src="images/icons/alert.png" alt=""></i>
+					<p><strong>Key concept</strong>: A script is a series of instructions that a computer can follow to achieve a goal. A recipe.</p>
 					<br>
+					<img src="images/icons/javascript.png" alt="">
+					<img src="images/icons/recipe.png" alt="">
 					<p>Imagine you're baking a cake.</p>
 					<ol>
 						<li><p>First, you need to gather your ingredients.</p></li>
 						<li><p>Then, you mix the ingredients together.</p></li>
 						<li><p>Lastly, you put the cake batter into the oven.</p></li>
 					</ol>
-					<br>
-					<br>
-					<p class="text-right">A script is just a fancy way of saying recipe.</p>
+				</section>
+
+				<section class="text-left">
+					<i><img src="images/icons/practice.png" alt=""></i>
+					<p><strong>Let us try!</strong></p>
+					<ol>
+						<li>Create a new file ( <kbd>CTRL + N</kbd> ) and name it <em>custom.js</em></li>
+						<li>In <em>custom.js</em>, write <code>alert("Hi friend!");</code></li>
+						<li>Now link <em>custom.js</em> to your <em>index.html</em></li>
+						<li>You've done it! You're now a web programmer</li>
+					</ol>
+					<div class="row">
+						<div class="col-5">
+							<figure>
+								<img src="images/script.png" alt="">
+								<figcaption>index.html</figcaption>
+							</figure>
+						</div>
+						<div class="col-7">
+							<figure>
+								<img src="images/alert.png" alt="">
+								<figcaption>custom.js</figcaption>
+							</figure>
+						</div>
+					</div>
 				</section>
 
 				<section><strong>3. Basic JavaScript Language</strong></section>
 
 				<section class="text-left">
 					<p>Like any new language, there are new words to learn (<strong>vocabulary</strong>) and rules for how to write the language (<strong>syntax</strong>).</p>
-					<br>
 					<p>Same goes for a programming language like JavaScript.</p>
 					<br>
 					<p>We will look at:</p>
@@ -125,27 +196,48 @@
 					<br>
 					<p>Imagine you're trying to calculate the area of a rectangle.</p>
 					<br>
-					<p>A human would simply tell you to multiply the width by the height to get the area. A computer however does not understand formulas!</p>
+					<p>A human would simply tell you to multiply the <em>width</em> by the <em>height</em> to get the <em>area</em>. A computer however does not understand formulas!</p>
 					<p>For a computer to do the same thing, it needs to:</p>
 					<ol>
-						<li>Remember the value for width</li>
-						<li>Remember the value for height</li>
+						<li>Remember the value for <em>width</em></li>
+						<li>Remember the value for <em>height</em></li>
 						<li>Multiple the two values together</li>
-						<li>Return the answer to the user</li>
+						<li><em>Return</em> the answer to the user</li>
 					</ol>
 				</section>
 
 				<section class="text-left">
-					<p>Variables are what computers use to "remember" these values. It is like a box that can store values in it!</p>
+					<i><img src="images/icons/alert.png" alt=""></i>
+					<p><strong>Variables</strong> are what computers use to "remember" these values. It is like a box that can store values in it!</p>
 					<img src="images/variables.png" alt="code screenshot" class="img-fluid">
 				</section>
 				
-				<section>
-						<img src="images/area.png" alt="code screenshot" class="img-fluid">
+				<section class="text-left">
+					<div class="row">
+						<div class="col-7">
+							<img src="images/variables-1.png" alt="code screenshot" class="img-fluid">
+						</div>
+						<div class="col-5">
+							<p>Each variable must have a name, in this case we name it <em>width</em></p>
+						</div>
+					</div>
 				</section>
 
 				<section class="text-left">
-					<p><strong>Important:</strong> There are rules you must follow when naming variables. Your computer will be confused if you don't follow them!</p>
+					<div class="row">
+						<div class="col-7">
+							<img src="images/variables-2.png" alt="code screenshot" class="img-fluid">
+						</div>
+						<div class="col-5">
+							<p>After we create a variable, it's time to store a value in it. <br>
+								Here we store a value of 4 in <em>width</em></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<i><img src="images/icons/alert.png" alt=""></i>
+					<p><strong>Important:</strong> JavaScript is just like English, you can't say "I apples love". Likewise, there are rules you must follow when naming variables. </p>
 					<div class="row">
 						<div class="col-7">
 							<ol>
@@ -163,7 +255,7 @@
 
 				<section class="text-left">
 					<p><strong>Data Types</strong></p>
-					<p>JavaScript needs to classify data into different types to interact properly with values.</p>
+					<p>In English, these are nouns, verbs, adjectives, etc. JavaScript too, classifies data into different types.</p>
 					<p>Example: You can do math with a number, but not with a sentence.</p>
 					<br>
 					<p>In JavaScript, there are 3 main data types (simplified):</p>
@@ -181,7 +273,7 @@
 							<img src="images/numbers.png" alt="code screenshot of number datatype" class="img-fluid">
 						</div>
 						<div class="col">
-							<p>Boolean</p>
+							<p>Boolean (true/false)</p>
 							<img src="images/boolean.png" alt="code screenshot of number datatype" class="img-fluid">
 						</div>
 					</div>
@@ -204,33 +296,32 @@
 				</section>
 
 				<section class="text-left">
-					<p><strong>Operators</strong></p>
+					<p><strong>Operators (+, -, *, /)</strong></p>
 					<div class="row">
-						<div class="col">
-							<img src="images/area.png" alt="code screenshot of arithmetic operators" class="img-fluid">
-							<p class="text-muted">from earlier</p>
-						</div>
-						<div class="col">
+						<div class="col-7">
 							<img src="images/operators.png" alt="code screenshot of arithmetic operators" class="img-fluid">
 							<p class="text-muted">arithmetic operators</p>
 						</div>
 					</div>
 				</section>
 				
-				<section class="text-left">
+				<!-- optional -->
+				<!-- <section class="text-left">
 					<p><strong>Operators (string)</strong></p>
 					<p>There is only one string operator: the + symbol. <br>
 						It's used to join two strings together.</p>
 					<img src="images/operators-string.png" alt="code screenshot of string concatenation" class="img-fluid">
 					<p class="text-muted">fancy name: string concatenation</p>
-				</section>
+					<p>Trick question: How to alert "Nice to meet you, my name <strong>is Neo</strong>" without changing <code>greeting</code> or <code>name</code></p>
+				</section> -->
 
 				<section class="text-left">
-					<p>Hands-on Practice!</p>
+					<i><img src="images/icons/practice.png" alt=""></i>
+					<p><strong>Hands-on Practice!</strong></p>
 					<ol>
-						<li>Store your birth year in a variable named <code>birthYear</code></li>
-						<li>Store the current year in a variable named <code>currentYear</code></li>
-						<li>Calculate your age by subtracting <code>birthYear</code> from <code>currentYear</code> and store it in a variable named <code>age</code></li>
+						<li>Store your birth year in <code>birthYear</code></li>
+						<li>Store the current year in <code>currentYear</code></li>
+						<li>Subtract <code>birthYear</code> from <code>currentYear</code> and store it in <code>age</code></li>
 						<li>Show a message in the browser saying how old you are using <code>age</code> <em>and</em> <code>alert()</code></li>
 					</ol>
 					<br>
@@ -245,9 +336,110 @@
 						sandbox="allow-scripts allow-same-origin">
 					</iframe>
 					<!-- <img src="images/answer-1.png" alt="code screenshot of answer for first practice" class="img-fluid"> -->
-				<p class="text-muted">Answer</p>
+					<p class="text-muted">Answer</p>
 				</section>
-			</div>
+
+				<section>
+					<p><strong>5 minutes break</strong></p>
+					<iframe src="https://giphy.com/embed/iIbgY9P1m0woM" width="480" height="301" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/pokemon-summer-pikachu-iIbgY9P1m0woM">via GIPHY</a></p>
+				</section>
+
+				<section class="text-left">
+					<div class="row">
+						<div class="col-7">
+							<p><strong>Recap:</strong></p>
+							<p>So far we have learned:</p>
+							<ol>
+								<li>JavaScript makes websites more interactive</li>
+								<li>A script is a series of instructions</li>
+								<li>Computers use variables to store values</li>
+								<li>There are numbers, Boolean, and strings data types</li>
+							</ol>
+						</div>
+						<div class="col-5">
+							<p><strong>Next:</strong></p>
+							<p>We will continue with:</p>
+							<ol>
+								<li>Function - What it is and why use it?</li>
+								<li>Decisions & Loops</li>
+								<li>DOM - Document Object Model</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<i><img src="images/icons/alert.png" alt=""></i>
+					<p><strong>Functions</strong></p>
+					<p><strong>Key Concept:</strong> JavaScript function is a block of code designed to perform a particular task.</p>
+					<div class="row">
+						<div class="col-5">
+							<p>We have actually used a function many times without knowing, which is <code>alert()</code> which displays an alert box with a specified message</p>
+						</div>
+						<div class="col-7">
+							<img src="images/strings.png" alt="">
+						</div>
+					</div>
+					
+				</section>
+
+				<section class="text-left">
+					<p><strong>Functions</strong></p>
+					<p><code>alert()</code> is considered a "built-in" function. However, we can also create our own custom functions.</p>
+					<p>Syntax:</p>
+					<div class="row">
+						<div class="col">
+							<img src="images/function-syntax.png" alt="">
+						</div>
+						<div class="col">
+							<p>A function is written with the function keyword, followed by a name, followed by parentheses ().</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Parameters</strong></p>
+					<p>Functions return <u>different results</u> based on what parameters you pass into it!</p>
+					<div class="row">
+						<div class="col-7">
+							<figure>
+								<img src="images/icons/fruit-1.png" alt="">
+								<img src="images/icons/fruit-2.png" alt="">
+							</figure>
+							<figcaption>function parameter <span class="float-right mr-5">result</span></figcaption>
+						</div>
+						<div class="col-5">
+							<img src="images/function-custom.png" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p>You can choose how many parameters you need, each separated by a comma</p>
+					<p>Example:</p>
+					<img src="images/function-param.png" alt="">
+					<img src="images/function.png" alt="">
+				</section>
+
+				<section class="text-left">
+					<i><img src="images/icons/alert.png" alt=""></i>
+					<p><strong>Important:</strong> Functions do <u>not</u> do anything unless you <em>call</em> them.</p>
+					<div class="row">
+						<div class="col">
+							<p>Q: How do you use (call) a function?</p>
+							<p>A: You call a function by using its name!</p>
+						</div>
+						<div class="col">
+							<img src="images/multiply.png" alt="">
+						</div>
+					</div>
+					<p>Note: You can try it in the browser's console. Use <kbd>CTRL + SHIFT + I</kbd> then "Console"</p>
+				</section>
+
+				<section>
+					<h1>Hands-on</h1>
+				</section>
+			</div> <!-- end slides -->
 		</div>
 
 		<!-- <li>Introduction</li>
@@ -262,6 +454,8 @@
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/jquery-3.3.1.slim.min.js"></script>
 		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="js/typed.min.js"></script>
+		<script src="js/monster.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -277,16 +471,5 @@
 				]
 			});
 		</script>
-
-<script>
-  
-		var birthYear = 1990;
-		var currentYear = 2019;
-		var age = currentYear - birthYear;
-		var greeting = "Hello, I am ";
-		
-		// alert(greeting + age);
-		
-	  </script>
 	</body>
 </html>
