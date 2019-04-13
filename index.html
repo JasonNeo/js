@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>WebLaunch 2019 JavaScript</title>
 
@@ -37,8 +37,21 @@
 			<div class="slides">
 
 				<section id="ufo-section">
+
+					<div id="btn-container" class="mt-5 mb-5">
+						<button data-color="info" type="button" class="btn btn-info">Blue</button>
+						<button data-color="success" type="button" class="btn btn-success">Green</button>
+						<button data-color="danger" type="button" class="btn btn-danger">Red</button>
+						<button data-color="warning" type="button" class="btn btn-warning">Yellow</button>
+						<button data-color="light" type="button" class="btn btn-light">Light</button>
+						<button data-color="dark" type="button" class="btn btn-dark">Dark</button>
+					</div>
+					<div id="speech-container">
+						<span id="monster-speech"></span>
+					</div>
 					<!-- corner avatar -->
 					<!-- https://scotch.io/bar-talk/build-an-eye-tracking-alien-with-javascript-solution-to-code-challenge-4 -->
+					<!-- https://codepen.io/rachsmith/pen/yYZapV -->
 					<div id="ufo">
 						<div id="monster" class="text-info">
 							<div class="body">
@@ -55,44 +68,68 @@
 							</div>
 						</div>
 					</div>
-					<div id="speech-container">
-						<span id="monster-speech"></span>
-					</div>
-					<div id="btn-container" class="mt-4">
-						<button data-color="info" type="button" class="btn btn-info">Blue</button>
-						<button data-color="success" type="button" class="btn btn-success">Green</button>
-						<button data-color="danger" type="button" class="btn btn-danger">Red</button>
-						<button data-color="warning" type="button" class="btn btn-warning">Yellow</button>
-						<button data-color="light" type="button" class="btn btn-light">Light</button>
-						<button data-color="dark" type="button" class="btn btn-dark">Dark</button>
-					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-4.PNG" alt="recap screenshot">
+				</section>
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-5.PNG" alt="recap screenshot">
+				</section>
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-1.PNG" alt="recap screenshot">
+				</section>
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-2.PNG" alt="recap screenshot">
+				</section>
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-3.PNG" alt="recap screenshot">
+				</section>
+				<section class="text-left">
+					<p><strong>Recap</strong></p>
+					<img src="images/recap/css-6.PNG" alt="recap screenshot">
 				</section>
 
 				<section class="text-left">
 					<h1>Table of Contents</h1>
-					<ol>
-						<li>Introduction</li>
+					<ol class="d-block">
+						<li>Introduction to JavaScript</li>
 						<li>The ABC of Programming</li>
 						<li>Basic JavaScript Language</li>
 						<li>Functions</li>
-						<li>Decisions & Loops</li>
+						<li>Arrays & Loops</li>
 						<li>Document Object Model (DOM)</li>
 						<li>Project: Custom Startpage</li>
 					</ol>
 				</section>
 
-				<section><strong>1. Introduction</strong></section>
-
 				<section>
 					<div class="d-flex align-items-center">
-						<i class="mr-3"><img src="images/icons/alert.png" alt=""></i>
+						<i class="mr-3"><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
 						<strong>Attention</strong>
 					</div>
 					<div class="d-flex align-items-center">
-						<i class="mr-3"><img src="images/icons/practice.png" alt=""></i>
+						<i class="mr-3"><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
 						<strong>Practice Time</strong>
 					</div>
+					<p class="text-left">Note: To view the browser's console, use <kbd>CTRL + SHIFT + I</kbd> then "Console"</p>
 				</section>
+
+				<section>
+					<img class="img-responsive" src="images/memes/harry.jpg" alt="harry potter">
+					<p class="credits">https://www.reddit.com/r/ProgrammerHumor/comments/avj910/developers/</p>
+				</section>
+				
+				<section>
+					<iframe src="https://giphy.com/embed/sNWGEbc5Jzp4c" width="480" height="298" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sNWGEbc5Jzp4c">via GIPHY</a></p>
+				</section>
+
+				<section><strong>1. Introduction to JavaScript</strong></section>
 
 				<section class="text-left">
 					<p>Q: What is JavaScript and how is it used in web programming?</p>
@@ -111,15 +148,15 @@
 					<p>How HTML, CSS & JavaScript Fit Together</p>
 					<div class="row">
 						<div class="col">
-							<span class="badge badge-warning">Content Layer</span>
+							<span class="badge badge-warning">Part 1: Content Layer</span>
 							<p>HTML gives the page structure</p>
 						</div>
 						<div class="col">
-							<span class="badge badge-info">Presentation Layer</span>
+							<span class="badge badge-info">Part 2: Presentation Layer</span>
 							<p>CSS enhances the HTML with styles</p>
 						</div>
 						<div class="col">
-							<span class="badge badge-success">Behavior Layer</span>
+							<span class="badge badge-success">Part 3: Behavior Layer</span>
 							<p>JavaScript determines how the page behaves</p>
 						</div>
 					</div>
@@ -139,11 +176,11 @@
 				<section><strong>2. The ABC of Programming</strong></section>
 
 				<section class="text-left">
-					<i><img src="images/icons/alert.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
 					<p><strong>Key concept</strong>: A script is a series of instructions that a computer can follow to achieve a goal. A recipe.</p>
 					<br>
-					<img src="images/icons/javascript.png" alt="">
-					<img src="images/icons/recipe.png" alt="">
+					<img class="img-responsive" src="images/icons/javascript.png" alt="">
+					<img class="img-responsive" src="images/icons/recipe.png" alt="">
 					<p>Imagine you're baking a cake.</p>
 					<ol>
 						<li><p>First, you need to gather your ingredients.</p></li>
@@ -153,7 +190,7 @@
 				</section>
 
 				<section class="text-left">
-					<i><img src="images/icons/practice.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
 					<p><strong>Let us try!</strong></p>
 					<ol>
 						<li>Create a new file ( <kbd>CTRL + N</kbd> ) and name it <em>custom.js</em></li>
@@ -164,13 +201,13 @@
 					<div class="row">
 						<div class="col-5">
 							<figure>
-								<img src="images/script.png" alt="">
+								<img class="img-responsive" src="images/script.png" alt="">
 								<figcaption>index.html</figcaption>
 							</figure>
 						</div>
 						<div class="col-7">
 							<figure>
-								<img src="images/alert.png" alt="">
+								<img class="img-responsive" src="images/alert.png" alt="">
 								<figcaption>custom.js</figcaption>
 							</figure>
 						</div>
@@ -207,15 +244,15 @@
 				</section>
 
 				<section class="text-left">
-					<i><img src="images/icons/alert.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i><i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
 					<p><strong>Variables</strong> are what computers use to "remember" these values. It is like a box that can store values in it!</p>
-					<img src="images/variables.png" alt="code screenshot" class="img-fluid">
+					<img class="img-responsive" src="images/variables.png" alt="code screenshot" class="img-fluid">
 				</section>
 				
 				<section class="text-left">
 					<div class="row">
 						<div class="col-7">
-							<img src="images/variables-1.png" alt="code screenshot" class="img-fluid">
+							<img class="img-responsive" src="images/variables-1.png" alt="code screenshot" class="img-fluid">
 						</div>
 						<div class="col-5">
 							<p>Each variable must have a name, in this case we name it <em>width</em></p>
@@ -226,7 +263,7 @@
 				<section class="text-left">
 					<div class="row">
 						<div class="col-7">
-							<img src="images/variables-2.png" alt="code screenshot" class="img-fluid">
+							<img class="img-responsive" src="images/variables-2.png" alt="code screenshot" class="img-fluid">
 						</div>
 						<div class="col-5">
 							<p>After we create a variable, it's time to store a value in it. <br>
@@ -236,7 +273,7 @@
 				</section>
 
 				<section class="text-left">
-					<i><img src="images/icons/alert.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
 					<p><strong>Important:</strong> JavaScript is just like English, you can't say "I apples love". Likewise, there are rules you must follow when naming variables. </p>
 					<div class="row">
 						<div class="col-7">
@@ -248,7 +285,7 @@
 							</ol>
 						</div>
 						<div class="col-5">
-							<img src="images/var-rules.png" alt="code screenshot" class="img-fluid">
+							<img class="img-responsive" src="images/var-rules.png" alt="code screenshot" class="img-fluid">
 						</div>
 					</div>
 				</section>
@@ -270,11 +307,11 @@
 					<div class="row">
 						<div class="col">
 							<p>numbers</p>
-							<img src="images/numbers.png" alt="code screenshot of number datatype" class="img-fluid">
+							<img class="img-responsive" src="images/numbers.png" alt="code screenshot of number datatype" class="img-fluid">
 						</div>
 						<div class="col">
 							<p>Boolean (true/false)</p>
-							<img src="images/boolean.png" alt="code screenshot of number datatype" class="img-fluid">
+							<img class="img-responsive" src="images/boolean.png" alt="code screenshot of number datatype" class="img-fluid">
 						</div>
 					</div>
 				</section>
@@ -283,7 +320,7 @@
 					<div class="row">
 						<div class="col">
 							<p>strings</p>
-							<img src="images/strings.png" alt="code screenshot of number datatype" class="img-fluid">
+							<img class="img-responsive" src="images/strings.png" alt="code screenshot of number datatype" class="img-fluid">
 						</div>
 						<div class="col">
 							<p>Notes:</p>
@@ -299,7 +336,7 @@
 					<p><strong>Operators (+, -, *, /)</strong></p>
 					<div class="row">
 						<div class="col-7">
-							<img src="images/operators.png" alt="code screenshot of arithmetic operators" class="img-fluid">
+							<img class="img-responsive" src="images/operators.png" alt="code screenshot of arithmetic operators" class="img-fluid">
 							<p class="text-muted">arithmetic operators</p>
 						</div>
 					</div>
@@ -310,13 +347,13 @@
 					<p><strong>Operators (string)</strong></p>
 					<p>There is only one string operator: the + symbol. <br>
 						It's used to join two strings together.</p>
-					<img src="images/operators-string.png" alt="code screenshot of string concatenation" class="img-fluid">
+					<img class="img-responsive" src="images/operators-string.png" alt="code screenshot of string concatenation" class="img-fluid">
 					<p class="text-muted">fancy name: string concatenation</p>
 					<p>Trick question: How to alert "Nice to meet you, my name <strong>is Neo</strong>" without changing <code>greeting</code> or <code>name</code></p>
 				</section> -->
 
 				<section class="text-left">
-					<i><img src="images/icons/practice.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
 					<p><strong>Hands-on Practice!</strong></p>
 					<ol>
 						<li>Store your birth year in <code>birthYear</code></li>
@@ -335,7 +372,7 @@
 						style="width:1024px; height:473px; border:0; overflow:hidden;"
 						sandbox="allow-scripts allow-same-origin">
 					</iframe>
-					<!-- <img src="images/answer-1.png" alt="code screenshot of answer for first practice" class="img-fluid"> -->
+					<!-- <img class="img-responsive" src="images/answer-1.png" alt="code screenshot of answer for first practice" class="img-fluid"> -->
 					<p class="text-muted">Answer</p>
 				</section>
 
@@ -361,23 +398,27 @@
 							<p>We will continue with:</p>
 							<ol>
 								<li>Function - What it is and why use it?</li>
-								<li>Decisions & Loops</li>
+								<li>Arrays & Loops</li>
 								<li>DOM - Document Object Model</li>
 							</ol>
 						</div>
 					</div>
 				</section>
 
+				<section>
+					<p><strong>4. Functions</strong></p>
+				</section>
+
 				<section class="text-left">
-					<i><img src="images/icons/alert.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
 					<p><strong>Functions</strong></p>
-					<p><strong>Key Concept:</strong> JavaScript function is a block of code designed to perform a particular task.</p>
+					<p><strong>Key Concept:</strong> JavaScript function is a block of code designed to perform a <u>particular task</u>.</p>
 					<div class="row">
 						<div class="col-5">
-							<p>We have actually used a function many times without knowing, which is <code>alert()</code> which displays an alert box with a specified message</p>
+							<p>We have actually used a function many times without knowing, which is <code>alert()</code> which <u>displays an alert box</u> with a specified message</p>
 						</div>
 						<div class="col-7">
-							<img src="images/strings.png" alt="">
+							<img class="img-responsive" src="images/strings.png" alt="">
 						</div>
 					</div>
 					
@@ -389,67 +430,311 @@
 					<p>Syntax:</p>
 					<div class="row">
 						<div class="col">
-							<img src="images/function-syntax.png" alt="">
+							<img class="img-responsive" src="images/function-syntax.png" alt="">
 						</div>
 						<div class="col">
-							<p>A function is written with the function keyword, followed by a name, followed by parentheses ().</p>
+							<p>A function is written with the <em>function</em> keyword, followed by a <em>name</em>, followed by parentheses ().</p>
 						</div>
 					</div>
+				</section>
+
+				<section>
+					<p><strong>Parameters?? Functions?</strong></p>
+					<iframe src="https://giphy.com/embed/iHe7mA9M9SsyQ" width="480" height="344" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-iHe7mA9M9SsyQ">via GIPHY</a></p>
 				</section>
 
 				<section class="text-left">
 					<p><strong>Parameters</strong></p>
-					<p>Functions return <u>different results</u> based on what parameters you pass into it!</p>
+					<p>Parameters are the ingredients you pass into a function. Functions return <u>different results</u> based on what parameters you pass into it!</p>
 					<div class="row">
 						<div class="col-7">
 							<figure>
-								<img src="images/icons/fruit-1.png" alt="">
-								<img src="images/icons/fruit-2.png" alt="">
+								<img class="img-responsive" src="images/icons/fruit-1.png" alt="">
+								<img class="img-responsive" src="images/icons/fruit-2.png" alt="">
 							</figure>
 							<figcaption>function parameter <span class="float-right mr-5">result</span></figcaption>
 						</div>
 						<div class="col-5">
-							<img src="images/function-custom.png" alt="">
+							<img class="img-responsive" src="images/function-custom.png" alt="">
 						</div>
 					</div>
 				</section>
 
 				<section class="text-left">
-					<p>You can choose how many parameters you need, each separated by a comma</p>
+					<i><img class="img-responsive" src="images/icons/practice.png" alt="practice icon"></i>
+					<p>You can choose how many parameters you need, each separated by a comma.</p>
 					<p>Example:</p>
-					<img src="images/function-param.png" alt="">
-					<img src="images/function.png" alt="">
+					<img class="img-responsive" src="images/function-param.png" alt="">
+					<img class="img-responsive" src="images/function.png" alt="">
 				</section>
 
 				<section class="text-left">
-					<i><img src="images/icons/alert.png" alt=""></i>
-					<p><strong>Important:</strong> Functions do <u>not</u> do anything unless you <em>call</em> them.</p>
+					<i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
+					<p><strong>Q:</strong> Why use a function? || <strong>A:</strong> Reusability and flexibility!</p>
 					<div class="row">
 						<div class="col">
-							<p>Q: How do you use (call) a function?</p>
-							<p>A: You call a function by using its name!</p>
+							<figure>
+								<img class="img-responsive" src="images/function-wo.png" alt="code not using function">
+								<figcaption>Without function <br>(295 characters)</figcaption>
+							</figure>
 						</div>
 						<div class="col">
-							<img src="images/multiply.png" alt="">
+							<figure>
+								<img class="img-responsive" src="images/function-w.png" alt="code using function">
+								<figcaption>With function <br>(158 characters)</figcaption>
+							</figure>
 						</div>
 					</div>
-					<p>Note: You can try it in the browser's console. Use <kbd>CTRL + SHIFT + I</kbd> then "Console"</p>
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
+					<p><strong>Important:</strong> Functions do <u>not</u> do anything unless you <em>call</em> them.</p>
+					<p><strong>Q</strong>: How do you use (call) a function? || <strong>A</strong>: You call a function by using its name!</p>
+					<img class="img-responsive" src="images/multiply.png" alt="">
 				</section>
 
 				<section>
-					<h1>Hands-on</h1>
+					<p><strong>5. Arrays & Loops</strong></p>
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
+					<p><strong>Arrays</strong></p>
+					<p>Arrays are used to store multiple values in a single variable. Think of it as a super variable!</p>
+					<img class="img-responsive" src="images/array.png" alt="">
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
+					<div class="row">
+						<div class="col">
+							<p><strong>Accessing elements in an array</strong></p>
+							<img class="img-responsive" src="images/array-2.png" alt="">
+						</div>
+						<div class="col">
+							<p><strong>Updating elements in an array</strong></p>
+							<img class="img-responsive" src="images/array-3.png" alt="">
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/alert.png" alt=""></i>
+					<i><img class="img-responsive" src="images/icons/practice.png" alt=""></i>
+					<p><strong>Loops</strong></p>
+					<p>Loops can execute a block of code <u>many times automatically</u> which saves us time. JavaScript supports different kinds of loops, we will focus on just <code>for</code> loops.</p>
+					<div class="row">
+						<div class="col">
+							<img class="img-responsive" src="images/loop-syntax.png" alt="for-loop syntax">
+							<figure>
+								<figcaption>Syntax</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img class="img-responsive" src="images/loop-console.png" alt="with loop">
+								<figcaption>Example</figcaption>
+							</figure>
+						</div>
+					</div>
+					<p>Note: <br>You can see the result in the browser's console. <br>Use <kbd>CTRL + SHIFT + I</kbd> then "Console"</p>
+				</section>
+
+				<section>
+					<div class="row">
+						<div class="col">
+							<img class="img-responsive" src="images/loop-console.png" alt="with loop">
+						</div>
+						<div class="col">
+							<img class="img-responsive" src="images/trace-table.png" alt="trace table">
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Combining arrays with loops</strong></p>
+					<p>By using arrays and loops together, you can do some amazing things!</p>
+					<div class="row">
+						<div class="col">
+							<figure>
+								<img class="img-responsive" src="images/loop-wo.png" alt="without loop">
+								<figcaption>Without for-loop</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img class="img-responsive" src="images/loop-w.png" alt="with loop">
+								<figcaption>With for-loop</figcaption>
+							</figure>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<iframe src="https://giphy.com/embed/R8n7YlPHe34dy" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mrw-td-R8n7YlPHe34dy">via GIPHY</a></p>
+				</section>
+
+				<section>
+					<p><strong>6. Document Object Model (DOM)</strong></p>
+				</section>
+
+				<section>
+					<img class="img-responsive" src="images/memes/huh.jpg" alt="ted huh face">
+					<p class="credits">https://memeshappen.com/meme/ted/huh-what-9205</p>
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/alert.png" alt="alert icon"></i>
+					<p><strong>Document Object Model (DOM)</strong></p>
+					<p>When looking at a webpage, developers see <u>elements</u>, while browsers see a <u>tree of objects</u>. DOM is the name of this tree.</p>
+					<p>Coincidentally, JavaScript uses this tree to do its job, and we will be learning 4 examples:</p>
+					<div class="row">
+						<div class="col">
+							<p><u>DOM Functions</u></p>
+							<ul>
+								<li>querySelector()</li>
+								<li>addEventListener()</li>
+							</ul>
+						</div>
+						<div class="col">
+							<p><u>DOM Properties (variables)</u></p>
+							<ul>
+								<li>style</li>
+								<li>textContent</li>
+								<!-- <li>classList</li> -->
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>DOM Functions - querySelector()</strong></p>
+					<p>querySelector() allows you to pick a HTML element and do amazing things with it!</p>
+					<img class="img-responsive" src="images/queryselector.png" alt="querySelector function">
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/practice.png" alt="practice icon"></i>
+					<p><strong>Hands-on Practice!</strong></p>
+					<ol>
+						<li><p>Create a new file named query.html</p></li>
+						<li><p>Let's create a <code>&lt;p&gt;</code> element with id <em>blue</em></p></li>
+						<li><p>Store this <code>&lt;p&gt;</code> element in a var named <em>paragraph</em> using <code>querySelector()</code></p></li>
+					</ol>
+				</section>
+				
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/alert.png" alt="alert icon"></i>
+					<p><strong>DOM Functions - addEventListener()</strong></p>
+					<p>In the browser window, the user may <em>click</em> on a button, <em>scroll</em> through the page, or <em>move</em> their mouse around. These user actions are called <u>events</u>.</p>
+					<p>JavaScript uses this information to provide feedback to the user!</p>
+					<p>Previous examples:</p>
+					<ul>
+						<li><a href="https://www.insideasiatours.com/step-inside/japan" target="_blank" rel="noopener noreferrer">insideasiatours.com/step-inside/japan</a></li>
+						<li><a href="https://www.reputationsquad.com/" target="_blank" rel="noopener noreferrer">reputationsquad.com/</a></li>
+						<li><a href="http://codepen.io/Yakudoo/pen/oXJYxy" target="_blank" rel="noopener noreferrer">codepen.io/Yakudoo/pen/oXJYxy</a></li>
+						<li><a href="http://codepen.io/knoland/pen/XKxAJb" target="_blank" rel="noopener noreferrer">codepen.io/knoland/pen/XKxAJb</a></li>
+					</ul>
+				</section>
+
+				<section class="text-left">
+					<p><strong>addEventListener()</strong></p>
+					<p>By using addEventListener(), JavaScript can continuously monitor a HTML element.</p>
+					<div class="row">
+						<div class="col-7">
+							<figure>
+								<img class="img-responsive" src="images/eventlistener.png" alt="event listener">
+								<figcaption>Syntax</figcaption>
+							</figure>
+						</div>
+						<div class="col-5">
+							<p><code>event</code> is set by the browser and cannot be changed</p>
+							<p>We will learn "click" event & "mouseover" event</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<i><img class="img-responsive" src="images/icons/practice.png" alt="practice icon"></i>
+					<p><strong>addEventListener()</strong> <button id="btn-try1" class="btn btn-lg float-right">Click me!</button></p>
+					<br>
+					<div class="row">
+						<div class="col">
+							<p>"click"</p>
+							<img class="img-responsive" src="images/eventlistener-click.png" alt="click event">
+						</div>
+						<div class="col">
+							<p>"mouseover"</p>
+							<img class="img-responsive" src="images/eventlistener-hover.png" alt="mouseenter event">
+						</div>
+					</div>
+				</section>
+
+				<section class="text-left">
+					<p><strong>DOM Properties - style</strong></p>
+					<p>JavaScript can use <code>style</code> to update the style of an element dynamically.</p>
+					<img class="img-responsive" src="images/eventlistener-click-style.png" alt="click eventlistener">
+				</section>
+				
+				<section>
+					<img class="img-responsive" src="images/eventlistener-click-style2.png" alt="click eventlistener">
+					<a class="d-block" href="https://www.w3schools.com/jsref/dom_obj_style.asp">Full list of styles</a>
+				</section>
+
+				<section class="text-left">
+					<p><strong>DOM Properties - textContent</strong></p>
+					<p>JavaScript can use <code>textContent</code> to update the text of an element dynamically.</p>
+					<img class="img-responsive" src="images/eventlistener-click-style3.png" alt="click eventlistener">
+				</section>
+
+				<section>
+					<p><strong>7. Project: Custom Startpage</strong></p>
+				</section>
+
+				<section>
+					<img class="img-responsive" src="images/project/project2.jpg" alt="screenshot">
+				</section>
+				<section>
+					<img class="img-responsive" src="images/project/project3.jpg" alt="screenshot">
+				</section>
+				<section>
+					<img class="img-responsive" src="images/project/project4.jpg" alt="screenshot">
+				</section>
+				<section>
+					<img class="img-responsive" src="images/project/project1.jpg" alt="screenshot">
+				</section>
+
+				<section class="text-left">
+					<p><strong>Working zip file</strong></p>
+					<p>Download: <a href="files/weblaunch-2css.7z">Startpage (HTML+CSS)</a></p>
+					<p>Download: <a href="files/weblaunch-3js.7z">Startpage (HTML+CSS+JS) - Locked</a></p>
+				</section>
+
+				<section class="text-left">
+						<p><strong>Challenge</strong></p>
+						<p>Enhance the current startpage you've made and make it more interesting. You may even create an entirely new one from scratch!</p>
+						<p>The top 3 winners will be invited to an exclusive project under Sunway Tech Club where you'll get to be part of a real world web development project.</p>
+						<p>Submit your custom startpage to <a href="mailto:sunwaytechclub@gmail.com">sunwaytechclub@gmail.com</a> before April 21, 11:59PM UTC+08:00.</p>
+				</section>
+
+				<section class="text-left">
+					<p><strong>Helpful resources</strong></p>
+					<ul>
+						<li><a href="https://www.reddit.com/r/startpages/top/?t=all">Top custom startpages</a></li>
+						<li><a href="https://codepen.io/anon/pen/GLmeKq">Digital clock</a></li>
+						<li><a href="https://codepen.io/stevenfabre/pen/Cyhjb">Flip clock</a></li>
+						<li><a href="https://codepen.io/giana/pen/GJMBEv">Calculator</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="img-responsive" src="images/memes/google.jpg" alt="google page">
+					<p class="credits">https://www.reddit.com/r/ProgrammerHumor/comments/ahn90a/to_sum_it_up/</p>
 				</section>
 			</div> <!-- end slides -->
 		</div>
 
-		<!-- <li>Introduction</li>
-		<li>The ABC of Programming</li>
-		<li>Basic JavaScript Language</li>
-		<li>Functions, Methods & Objects</li>
-		<li>Decisions & Loops</li>
-		<li>Document Object Model</li>
-		<li>Events</li>
-		<li>jQuery</li> -->
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/jquery-3.3.1.slim.min.js"></script>
@@ -469,6 +754,21 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
+			});
+
+			var btnTry1 = document.querySelector("#btn-try1");
+
+			btnTry1.addEventListener("click", function(e) {
+				e.target.classList.toggle("clicked");
+				e.target.textContent = "Ouch!";
+			});
+
+			btnTry1.addEventListener("mouseover", function(e) {
+				e.target.classList.add("mouseovered");
+			});
+
+			btnTry1.addEventListener("mouseleave", function(e) {
+				e.target.classList.remove("mouseovered");
 			});
 		</script>
 	</body>

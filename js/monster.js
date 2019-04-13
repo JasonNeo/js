@@ -14,14 +14,13 @@ ufo.addEventListener('mousemove', function(e) {
 btnContainer.addEventListener('click', function(e) {
     if(e.target && e.target.nodeName == "BUTTON") {
         var color = e.target.getAttribute('data-color');
-        console.log(color);
         monster.className = '';
         monster.className = ('text-'+color);
     }
 });
 
 var speech = [
-    "Psssst!", 
+    "Welcome to WebLaunch!", 
     "My name is Bob.",
     "I'm made with love and JavaScript.",
     "My skill is changing colours!"
