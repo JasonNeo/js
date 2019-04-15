@@ -2,7 +2,7 @@
 
   [ sunblind ]
 
-  A blindingly sunny theme for Reveal.js with Lora + Leto fonts and a colorful border.
+  A blindingly sunny theme for Reveal.js with Montserrat + Leto fonts and a colorful border.
   By Josh Dzielak, https://dzello.com/, License MIT
 
   The bold border is optional and requires some HTML. To use it:
@@ -27,8 +27,8 @@
   }
 
 */
-@import url(https://fonts.googleapis.com/css?family=Lato:300,700);
-@import url(https://fonts.googleapis.com/css?family=Lora:700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #141414; }
 
@@ -88,7 +88,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Lato", serif;
+  font-family: "Raleway", serif;
   font-size: 32px;
   font-weight: normal;
   color: #363636; }
@@ -119,7 +119,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #141414;
-  font-family: "Lora", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: normal;
